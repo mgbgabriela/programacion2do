@@ -1,14 +1,19 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { PistaService } from './pista.service';
-import { timeStamp } from 'console';
 
 @Controller('pista')
 export class PistaController {
     constructor (private pistaService:PistaService){}
 
-    @Get()
-public getPistas():String{
-    return this.pistaService.getPistas();
+    @Get('pistas')
+     public getPistas():any{
+     return this.pistaService.getPistas();
 
 }
+    @Get(':id')
+        public getPistasById(@Param('id')id:number):any{
+       return this.pistaService.getPistaById(id);
+
+}
+
 }

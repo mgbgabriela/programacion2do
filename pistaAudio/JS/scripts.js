@@ -9,7 +9,7 @@ let pistas = [];
 load();
 
 async function load(){
-        let promesa = fetch('/pista');
+        let promesa = fetch('/pista/pistas');
         console.log(promesa);
         let respuesta = await promesa;
         console.log(respuesta);
