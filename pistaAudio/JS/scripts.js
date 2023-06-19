@@ -6,6 +6,22 @@ btnDuracion.addEventListener("click", duracion);
 
 let pistas = [];
 
+load();
+
+async function load(){
+        let promesa = fetch('/pista');
+        console.log(promesa);
+        let respuesta = await promesa;
+        console.log(respuesta);
+        if(respuesta.ok){
+        let renglon = await respuesta.json();
+        console.log(renglon);
+        pistas = renglon;
+        mostrarPistas();
+        }
+
+    }
+
     function agregar (){
         let identificador = parseInt(document.querySelector("#identificador").value);
         let titulo = document.getElementById("titulo").value;
@@ -57,8 +73,8 @@ console.log("Funcion Duracion")
         
     
     document.querySelector("#total").innerHTML = `
-    <p> Duracion total: ${total} </p>
-    <p> La pista más larga tiene una duracion de: ${max} </p>
+    <p> Duracion total: ${total}</p>
+    <p> La pista más larga tiene una duracion de: ${max}</p>
     `;
     
 }

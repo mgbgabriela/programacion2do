@@ -1,0 +1,35 @@
+{
+    "status":"ok",
+    "audios":[
+        {
+            "identificador":1,
+            "titulo": "do",
+            "duracion": 10,
+            "interprete": "interprete 1"
+        },
+        {
+            "identificador":2,
+            "titulo": "re",
+            "duracion": 20,
+            "interprete": "interprete 2"
+        },
+        {
+            "identificador": 3,
+            "titulo": "mi",
+            "duracion": 30,
+            "interprete": "interprete 3"
+        },
+        {
+            "identificador": 4,
+            "titulo": "fa",
+            "duracion": 40,
+            "interprete": "interprete 4"
+        },
+        {
+            "identificador": 5,
+            "titulo": "sol",
+            "duracion": 50,
+            "interprete": "interprete 5"
+        }   
+]
+}
