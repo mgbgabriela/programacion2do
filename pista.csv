@@ -5,3 +5,6 @@
 5,titulo5,567,interprete5
 6,titulo6,678,interprete6
 7,titulo7,789,interprete7
+NaN,$ {pista.getTitulo()},NaN,undefined
+10,titulo10,12399,interprete10
+11,wr,234,s

@@ -36,10 +36,19 @@ async function load(){
             "interprete": interprete
         }
 
+        if(AgregarPistaServer(renglon)){
         pistas.push(renglon);
-
         mostrarPistas();
-    }
+    }}
+
+async function AgregarPistaServer(pista){
+    let respuesta = await fetch('/pista/agregar',  {
+        method:'POST',
+        headers:{'content-Type':'application/json'},
+        body: JSON.stringify(pista)
+    });
+    return (await respuesta.text()=="OK");
+}
 
     function mostrarPistas(){
         let html ="";
