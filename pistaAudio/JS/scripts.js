@@ -36,7 +36,7 @@ async function load(){
             "interprete": interprete
         }
 
-        if(AgregarPistaServer(renglon)){
+       if(AgregarPistaServer(renglon)){
         pistas.push(renglon);
         mostrarPistas();
     }}
@@ -47,7 +47,7 @@ async function AgregarPistaServer(pista){
         headers:{'content-Type':'application/json'},
         body: JSON.stringify(pista)
     });
-    return (await respuesta.text()=="OK");
+    return (await respuesta.text == 'OK');
 }
 
     function mostrarPistas(){
@@ -60,6 +60,7 @@ async function AgregarPistaServer(pista){
                 <td>${rg.titulo}</td>
                 <td>${rg.duracion}</td>
                 <td>${rg.interprete}</td>
+                <td><a href ="pistaDetail.html?index=${rg.identificador}">Detalle</td>
             </tr>
             `;
         }
